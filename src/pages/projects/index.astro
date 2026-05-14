@@ -5,15 +5,55 @@ import Layout from '../../layouts/Layout.astro';
 <Layout title="Projects, Ian Bragg">
   <h1>Projects</h1>
   <p>
-    I'm porting these to live, interactive versions on the site. Code lives in a separate repo.
+    Selected work. I'm porting these to live, interactive versions on the site. Code lives in a separate repo.
   </p>
 
-  <ul>
-    <li><strong>llm-osec.</strong> OWASP LLM Top 10 scanner. AI security CLI with a planned in-browser playground.</li>
-    <li><strong>apld-edge.</strong> Personal algorithmic trading platform. Sqlite-backed market-data daemon, AI-driven signal scoring.</li>
-    <li><strong>AppSec platform contributions.</strong> LLM-augmented features in production security-findings management tooling.</li>
-    <li><strong>flip-edge.</strong> Vision-driven marketplace valuation tool.</li>
-  </ul>
+  <div class="project-card">
+    <h3>llm-osec</h3>
+    <p class="hook">OWASP LLM Top 10 scanner. AI-security CLI with a planned in-browser playground.</p>
+    <ul class="chip-row">
+      <li class="chip">python</li>
+      <li class="chip">cli</li>
+      <li class="chip">owasp-llm</li>
+      <li class="chip">anthropic-sdk</li>
+    </ul>
+    <p class="status-row">&gt; status: prototype</p>
+  </div>
+
+  <div class="project-card">
+    <h3>apld-edge</h3>
+    <p class="hook">Personal algorithmic trading platform. Sqlite-backed market-data daemon, AI-driven signal scoring.</p>
+    <ul class="chip-row">
+      <li class="chip">python</li>
+      <li class="chip">sqlite</li>
+      <li class="chip">aws</li>
+      <li class="chip">runpod</li>
+      <li class="chip">anthropic-sdk</li>
+    </ul>
+    <p class="status-row">&gt; status: live · v0.4.0</p>
+  </div>
+
+  <div class="project-card">
+    <h3>appsec-platform</h3>
+    <p class="hook">LLM-augmented features in production security-findings management tooling.</p>
+    <ul class="chip-row">
+      <li class="chip">python</li>
+      <li class="chip">llm</li>
+      <li class="chip">security-findings</li>
+    </ul>
+    <p class="status-row">&gt; status: shipped</p>
+  </div>
+
+  <div class="project-card">
+    <h3>flip-edge</h3>
+    <p class="hook">Vision-driven marketplace valuation tool.</p>
+    <ul class="chip-row">
+      <li class="chip">python</li>
+      <li class="chip">claude-vision</li>
+      <li class="chip">computer-vision</li>
+    </ul>
+    <p class="status-row">&gt; status: prototype · v0</p>
+  </div>
 
   <p class="muted">Interactive demos coming soon.</p>
 </Layout>

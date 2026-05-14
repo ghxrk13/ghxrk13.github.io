@@ -12,7 +12,7 @@ import Layout from '../layouts/Layout.astro';
 
   <hr />
 
-  <h2>Summary</h2>
+  <h2 class="section-marker">╶─ Summary</h2>
   <p>
     Senior applied AI engineer. 11 years building things that need to work in production. ML, robotics, cybersecurity, autonomous systems.
   </p>
@@ -26,7 +26,11 @@ import Layout from '../layouts/Layout.astro';
     <strong>CISSP</strong>. <strong>Active TS/SCI</strong>. B.S. in Information Assurance. The combination of AI depth and real security credentials isn't common.
   </p>
 
-  <h2>Experience</h2>
+  <aside class="cred-callout">
+    CISSP &nbsp;·&nbsp; Active TS/SCI &nbsp;·&nbsp; D.Tech (Purdue, in progress) &nbsp;·&nbsp; M.S. CS Georgia Tech
+  </aside>
+
+  <h2 class="section-marker">╶─ Experience</h2>
 
   <h3>Senior Data Scientist &amp; Technical Lead, COLSA</h3>
   <p class="muted">Jun 2021 to present. Huntsville, AL.</p>
@@ -72,14 +76,14 @@ import Layout from '../layouts/Layout.astro';
     <li>Stood up and tuned Hadoop clusters for computational laboratory research. Documented general data-ingestion pipelines for staff and students.</li>
   </ul>
 
-  <h2>Education</h2>
+  <h2 class="section-marker">╶─ Education</h2>
   <ul>
     <li><strong>Doctor of Technology, Interdisciplinary.</strong> Purdue University. Target completion around May 2028. Prelim Spring 2027. Coursework spans supply chain, adversarial AI, and more. Dissertation: <em>Detection of Operational Divergence in LLMs and AI Deployed in Denied Environments</em>. Adjacent research strands: scalable model interchange (assessing available hardware, evaluating GPU presence, deploying models that fit what's on hand), and whether correctly-operating AI actually moves a team or organization toward its mission, goals, and vision.</li>
     <li><strong>M.S. Computer Science (ML), Computational Perception &amp; Robotics.</strong> Georgia Institute of Technology. May 2022.</li>
     <li><strong>B.S. Computer Science, Information Assurance.</strong> Jacksonville State University. May 2015.</li>
   </ul>
 
-  <h2>Credentials</h2>
+  <h2 class="section-marker">╶─ Credentials</h2>
   <ul>
     <li><strong>CISSP</strong>. ISC2. Issued Jan 2026.</li>
     <li>Active TS/SCI Clearance.</li>
@@ -87,13 +91,66 @@ import Layout from '../layouts/Layout.astro';
     <li>Ethical Research Code of Conduct (2024).</li>
   </ul>
 
-  <h2>Communities &amp; speaking</h2>
+  <h2 class="section-marker">╶─ Communities &amp; Speaking</h2>
   <p>I participate in and speak at software assurance, DevSecOps, and AI communities of practice.</p>
 
-  <h2>Core competencies</h2>
-  <p><strong>AI / ML.</strong> Neural networks, deep learning, computer vision, digital signal processing. Supervised, unsupervised, and transfer learning. LLM deployment across local, hybrid, and air-gapped inference. Retrieval-augmented generation over domain corpora (CWE, CVE, software-assurance reference data). Evaluation pipelines including red-team probes and divergence detection. Fine-tuning, embeddings, vector similarity. Hardware assessment for model fit and inference budgeting.</p>
-  <p><strong>Robotics &amp; autonomous systems.</strong> Multi-agent coordination, autonomous control, real-time sensor integration, embedded systems, hardware-in-the-loop, swarming. Software for sensors, control, and resource management of swarms in denied environments.</p>
-  <p><strong>Security &amp; compliance.</strong> CISSP-credentialed. STIGs, NIST controls, Risk Management Framework. Software-assurance lifecycle. CWE and CVE taxonomies. Static and dynamic analysis. Compliance-bounded deployment. Air-gapped and offline-inference environments. Hardened production systems. Governance-aware infrastructure including commit-history anonymization for multi-tenant artifact handling.</p>
-  <p><strong>Platform &amp; infrastructure.</strong> MLOps and DevSecOps pipelines. Containerized microservices via Docker and docker-compose. VMware for virtualization and lab work. Hybrid cloud across on-prem and AWS (EC2, t4g.nano, S3). CI/CD with GitLab CI and GitHub Actions. Distributed computing, petabyte-scale data pipelines, Hadoop. SSH-based remote workflows via Termius and Tailscale.</p>
-  <p><strong>Languages &amp; tooling.</strong> Python (primary). Bash and PowerShell on the systems side. SQL. TensorFlow, PyTorch, and Hugging Face Transformers. Anthropic, OpenAI, and Ollama SDKs for LLM and AI work. Claude Vision API where vision is in scope. RAG pipelines and vector stores over CWE / CVE / software-assurance corpora. Code Property Graphs (CPG) and AST-based static analysis. Knowledge-graph and graph-database tooling for cross-artifact relationships. SQLite, pandas, Hadoop. Docker, docker-compose, VMware. AWS (EC2, t4g.nano, S3), GPU bursts via RunPod. Git, GitLab, GitHub, Gitea. Playwright for browser automation. Typer for CLIs. Bitwarden CLI for secrets. Termius and Tailscale for SSH-based remote work. Obsidian for knowledge management, synced cross-machine via Syncthing. Linux, Windows, and WSL2 development environments.</p>
+  <h2 class="section-marker">╶─ Core Competencies</h2>
+
+  <h3>AI / ML</h3>
+  <ul>
+    <li>Neural networks, deep learning, computer vision, digital signal processing.</li>
+    <li>Supervised, unsupervised, and transfer learning.</li>
+    <li>LLM deployment across local, hybrid, and air-gapped inference.</li>
+    <li>Retrieval-augmented generation over domain corpora (CWE, CVE, software-assurance reference data).</li>
+    <li>Evaluation pipelines including red-team probes and divergence detection.</li>
+    <li>Fine-tuning, embeddings, vector similarity.</li>
+    <li>Hardware assessment for model fit and inference budgeting.</li>
+  </ul>
+
+  <h3>Robotics &amp; Autonomous Systems</h3>
+  <ul>
+    <li>Multi-agent coordination, autonomous control, real-time sensor integration.</li>
+    <li>Embedded systems, hardware-in-the-loop, swarming.</li>
+    <li>Software for sensors, control, and resource management of swarms in denied environments.</li>
+  </ul>
+
+  <h3>Security &amp; Compliance</h3>
+  <ul>
+    <li>CISSP-credentialed.</li>
+    <li>STIGs, NIST controls, Risk Management Framework.</li>
+    <li>Software-assurance lifecycle. CWE and CVE taxonomies.</li>
+    <li>Static and dynamic analysis.</li>
+    <li>Compliance-bounded deployment. Air-gapped and offline-inference environments.</li>
+    <li>Hardened production systems.</li>
+    <li>Governance-aware infrastructure including commit-history anonymization for multi-tenant artifact handling.</li>
+  </ul>
+
+  <h3>Platform &amp; Infrastructure</h3>
+  <ul>
+    <li>MLOps and DevSecOps pipelines.</li>
+    <li>Containerized microservices via Docker and docker-compose.</li>
+    <li>VMware for virtualization and lab work.</li>
+    <li>Hybrid cloud across on-prem and AWS (EC2, t4g.nano, S3).</li>
+    <li>CI/CD with GitLab CI and GitHub Actions.</li>
+    <li>Distributed computing, petabyte-scale data pipelines, Hadoop.</li>
+    <li>SSH-based remote workflows via Termius and Tailscale.</li>
+  </ul>
+
+  <h3>Languages &amp; Tooling</h3>
+  <ul>
+    <li>Python (primary). Bash and PowerShell on the systems side. SQL.</li>
+    <li>TensorFlow, PyTorch, and Hugging Face Transformers.</li>
+    <li>Anthropic, OpenAI, and Ollama SDKs for LLM and AI work. Claude Vision API where vision is in scope.</li>
+    <li>RAG pipelines and vector stores over CWE / CVE / software-assurance corpora.</li>
+    <li>Code Property Graphs (CPG) and AST-based static analysis.</li>
+    <li>Knowledge-graph and graph-database tooling for cross-artifact relationships.</li>
+    <li>SQLite, pandas, Hadoop.</li>
+    <li>Docker, docker-compose, VMware.</li>
+    <li>AWS (EC2, t4g.nano, S3), GPU bursts via RunPod.</li>
+    <li>Git, GitLab, GitHub, Gitea.</li>
+    <li>Playwright for browser automation. Typer for CLIs. Bitwarden CLI for secrets.</li>
+    <li>Termius and Tailscale for SSH-based remote work.</li>
+    <li>Obsidian for knowledge management, synced cross-machine via Syncthing.</li>
+    <li>Linux, Windows, and WSL2 development environments.</li>
+  </ul>
 </Layout>
