@@ -1,51 +1,19 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-
-const projects = [
-  {
-    slug: 'llm-osec',
-    title: 'llm-osec — OWASP LLM Top 10 scanner',
-    blurb: 'CLI that probes a deployed LLM application for the OWASP Top 10 risks specific to LLMs (prompt injection, sensitive data leakage, insecure output handling, etc.) and produces a structured findings report.',
-    tags: ['AI security', 'Python', 'Claude', 'CISSP-flavored'],
-    status: 'In development',
-  },
-  {
-    slug: 'apld-edge',
-    title: 'apld-edge — algorithmic trading platform',
-    blurb: 'Sqlite-backed 24/7 market-data collection daemon plus Claude-driven signal scoring and append-only decision log. Production-grade end-to-end, deployed across local and cloud infrastructure.',
-    tags: ['Python', 'Claude', 'Async', 'SQLite', 'AWS'],
-    status: 'Live',
-  },
-  {
-    slug: 'dojo-n-speed',
-    title: 'dojo-n-speed — LLM-augmented AppSec tooling',
-    blurb: 'Production contributions to a DefectDojo fork: multi-SCM abstraction, VS Code integration, governance-aware infrastructure for compliance-sensitive environments.',
-    tags: ['Django', 'Python', 'AppSec', 'LLMs in production'],
-    status: 'Shipped',
-  },
-  {
-    slug: 'flip-edge',
-    title: 'flip-edge — vision-driven marketplace valuation',
-    blurb: 'Claude Vision API + Playwright pipeline that ingests marketplace screenshots, extracts listing attributes, and surfaces comp pricing for resale opportunities.',
-    tags: ['Claude Vision', 'Playwright', 'Python'],
-    status: 'Early',
-  },
-];
 ---
 
-<Layout title="Projects — Ian Bragg">
+<Layout title="Projects, Ian Bragg">
   <h1>Projects</h1>
-  <p class="muted">A working list. Anything tagged "In development" or "Early" is actively under construction.</p>
+  <p>
+    I'm porting these to live, interactive versions on the site. Code lives in a separate repo.
+  </p>
 
-  {projects.map((p) => (
-    <a class="project-card" href={`/projects/${p.slug}/`}>
-      <h3>{p.title}</h3>
-      <p>{p.blurb}</p>
-      <div class="tags">
-        <span class="muted">{p.status}</span>
-        &nbsp;·&nbsp;
-        {p.tags.join(' · ')}
-      </div>
-    </a>
-  ))}
+  <ul>
+    <li><strong>llm-osec.</strong> OWASP LLM Top 10 scanner. AI security CLI with a planned in-browser playground.</li>
+    <li><strong>apld-edge.</strong> Personal algorithmic trading platform. Sqlite-backed market-data daemon, Claude-driven signal scoring.</li>
+    <li><strong>dojo-n-speed contributions.</strong> LLM-augmented AppSec tooling for the DefectDojo fork I work on.</li>
+    <li><strong>flip-edge.</strong> Vision-driven marketplace valuation tool.</li>
+  </ul>
+
+  <p class="muted">Interactive demos coming soon.</p>
 </Layout>
