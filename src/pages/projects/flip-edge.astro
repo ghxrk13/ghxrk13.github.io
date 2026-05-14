@@ -1,0 +1,41 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="flip-edge — Ian Bragg">
+  <h1>flip-edge</h1>
+  <p class="tagline">Vision-driven marketplace valuation — Claude Vision API + Playwright pipeline that turns marketplace screenshots into structured listings and comp prices.</p>
+
+  <div class="signals">
+    <span class="signal">Status: early</span>
+    <span class="signal">Python · Claude Vision · Playwright · Typer</span>
+  </div>
+
+  <h2>The thesis</h2>
+  <p>
+    Resale-arbitrage opportunities on local marketplaces (Facebook
+    Marketplace, OfferUp, Craigslist) get burned away fast by experienced
+    flippers. The remaining edge is speed: how quickly you can convert a
+    listing photo into "this is a $X item, comps are $Y on the resale side,
+    fair offer is $Z." Vision models close that gap dramatically.
+  </p>
+
+  <h2>What works today</h2>
+  <ul>
+    <li>Playwright-driven scraping primitives for marketplace surfaces (login
+      flows, screenshot capture, listing pagination).</li>
+    <li>CLI scaffold using Typer; clean separation of <em>capture</em>,
+      <em>extract</em>, <em>price</em>, <em>rank</em> phases.</li>
+    <li>Secrets routed through Bitwarden CLI — same pattern as apld-edge.</li>
+  </ul>
+
+  <h2>What's next</h2>
+  <ul>
+    <li>Claude Vision extraction: photo → structured listing (brand, model,
+      condition, accessories, defects).</li>
+    <li>Comps integration: eBay sold-listings + Mercari + Poshmark APIs to
+      anchor target sell-price.</li>
+    <li>Margin ranker: surface only deals above a configurable profit
+      threshold.</li>
+  </ul>
+</Layout>

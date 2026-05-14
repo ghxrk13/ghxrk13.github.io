@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="dojo-n-speed contributions — Ian Bragg">
+  <h1>dojo-n-speed contributions</h1>
+  <p class="tagline">Production contributions to a DefectDojo fork — LLM-augmented features for security finding management, multi-SCM abstraction, governance-aware infrastructure.</p>
+
+  <div class="signals">
+    <span class="signal">Status: shipped (and ongoing)</span>
+    <span class="signal">Django · Python · LLMs in production · AppSec</span>
+  </div>
+
+  <h2>Context</h2>
+  <p>
+    DefectDojo is the dominant open-source platform for managing application
+    security findings — vulnerability triage, deduplication, lifecycle,
+    integrations across scanners. A team I work with maintains a fork
+    tailored to high-rigor deployments. My contributions sit at the
+    intersection of the application backend, developer experience, and the
+    LLM-augmentation surface.
+  </p>
+
+  <h2>Features shipped</h2>
+  <ul>
+    <li><strong>Multi-SCM abstraction layer.</strong> A pluggable helper that
+      generates correct deep-links from a finding to the offending code,
+      regardless of whether the source lives on GitHub, Gitea, Bitbucket, or
+      Azure DevOps. Replaces hard-coded GitHub-only handling in several call
+      sites.</li>
+    <li><strong>VS Code integration.</strong> One-click <code>vscode://</code>
+      handlers from findings → opens the file at the right line in the
+      reviewer's editor, including in air-gapped / code-server deployments.</li>
+    <li><strong>Governance-aware infrastructure.</strong> Tooling for
+      filter-branch / commit-history anonymization so the fork can be
+      mirrored cleanly between collaborator accounts without leaking
+      contributor metadata that doesn't belong in the public surface.</li>
+    <li><strong>LLM-augmented triage (in development).</strong> Claude-driven
+      summarization and clustering of findings to reduce reviewer fatigue
+      on noisy scan output.</li>
+  </ul>
+
+  <h2>Why it matters to a hiring manager</h2>
+  <p>
+    Shipping AppSec features in Django at a real production cadence, against
+    real-world constraints (multi-SCM portability, compliance environments,
+    contributor governance) is concrete evidence of "can do anything
+    software" — not just AI. It's also the closest analog on this profile to
+    the day-to-day work at companies like Snyk, Veracode, HiddenLayer, and
+    the security teams at AI labs.
+  </p>
+</Layout>

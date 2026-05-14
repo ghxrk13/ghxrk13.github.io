@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="apld-edge — Ian Bragg">
+  <h1>apld-edge</h1>
+  <p class="tagline">Personal algorithmic trading platform — sqlite-backed market-data daemon, Claude-driven signal scoring, append-only decision log. End-to-end, deployed.</p>
+
+  <div class="signals">
+    <span class="signal">Status: live</span>
+    <span class="signal">Python · Claude · SQLite · AWS · Async</span>
+  </div>
+
+  <h2>What it is</h2>
+  <p>
+    A single-ticker research and trading platform built around a continuous
+    24/7 data-collection daemon and a Claude-driven advice engine. The daemon
+    enriches a local sqlite store with price, implied volatility, news, SEC
+    filings, peer prices, and broader market signals. A periodic <em>brief</em>
+    step ships the relevant state to Claude, which produces a structured
+    recommendation logged to an append-only decision file.
+  </p>
+
+  <h2>Design constraints that shaped it</h2>
+  <ul>
+    <li><strong>Statelessness of the LLM.</strong> Claude has no memory between
+      runs, so the whole platform is built around feeding the right context
+      every time and treating the decision log as the durable surface.</li>
+    <li><strong>Resilience over cleverness.</strong> Collection daemon must
+      survive market hours, network outages, and IDE restarts. Built with
+      cron + service-style supervision.</li>
+    <li><strong>Auditable decisions.</strong> Every recommendation Claude
+      produces is logged with the exact input snapshot, so the rationale can
+      be replayed and graded against actual outcomes.</li>
+  </ul>
+
+  <h2>What it does well</h2>
+  <ul>
+    <li>End-to-end data pipeline: collection → enrichment → briefing → recommendation → logging.</li>
+    <li>Multi-environment deploy: works on local Surface Book + AWS t4g.nano + RunPod GPU bursts.</li>
+    <li>Secrets via Bitwarden CLI — works on Windows-SSH and Linux equally; no env-file leaks.</li>
+  </ul>
+
+  <h2>What it isn't</h2>
+  <p class="muted">
+    Not a fund. Not financial advice. Personal research tool, sized for personal
+    capital and personal risk tolerance.
+  </p>
+</Layout>
